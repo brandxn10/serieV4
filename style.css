@@ -1,0 +1,75 @@
+
+.image-container {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden; 
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+body {
+  text-align: center;
+  background-color: #6C3483;
+  padding: 5px;
+}
+
+.principal {
+  border-style: ridge;
+  border-width: 5px;
+  border-color: #F39C12;
+}
+
+@font-face {
+  font-family: 'cibola';
+  src: url("fuente/south-park-2/south-park/cibola.ttf");
+}
+
+.fuente {
+  font-family: 'cibola';
+  color: #07090a;
+  font-size: 60px;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'cibola';
+}
+
+.carta {
+  text-align: center;
+  margin: 5px;
+  background-color: #8E44AD;
+  padding: 1%;
+  border-style: solid;
+  border-radius: 4%;
+  border-color: #F39C12;
+  border-width: 6px;
+  width: 30%;
+  background-image: url('img/fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.cont{
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .cont {
+    flex-direction: column;
+  }
+  .carta {
+    width: 70%;
+  }
+  .image-container{
+    align-self: center;
+  }
+}

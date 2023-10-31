@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            padding: 5px;
+        }
+        #imagen{
+            max-width: 10%;
+        }
+    </style>
+</head>
+<body>
+    <br>
+        <h1 id="titulo"></h1>
+        <img src="" alt="" id="imagen">
+        <p id="parrafo"></p>
+        <br>
+    <a href="personajes.html"><button class="btn btn-danger">Volver</button></a>
+    <br>
+    <input type="hidden" name="" id="nombre" value="">
+    <input type="hidden" name="" id="estilo" value="">
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const personaje = urlParams.get('opcion');
+        const estilo = urlParams.get('estilo');
+        const imagen = document.getElementById('imagen');
+        const titulo = document.getElementById('titulo');
+        const texto = document.getElementById('parrafo');
+        let nombre;
+
+        switch(personaje){
+            case '1':
+                nombre = 'Eric Cartman';
+                document.title = "Eric Cartman";
+                imagen.src = "img/eric.png";
+                titulo.innerText = document.title;
+                texto.innerText = "Eric Theodore Cartman, comúnmente llamado Cartman, aunque en algún episodio se mencionó a él mismo como Eric P. Cartman, es un personaje ficticio de la serie de dibujos animados estadounidense South Park. Fue creado por Trey Parker y Matt Stone.";
+            break;
+
+            case '2':
+                nombre = 'Stan Marsh';
+                document.title = "Stan Marsh";
+                imagen.src = "img/stan.png";
+                titulo.innerText = document.title;
+                texto.innerText = "Stan es un estudiante de cuarto grado que comúnmente tiene excéntricas experiencias no muy típicas de la vida tradicional de un pequeño pueblo en su ciudad natal ficticia de South Park, Colorado. Stan es generalmente representado como amable, eficiente, servicial y relajado. A menudo comparte con su amigo Kyle un papel de liderazgo como protagonista del show. Stan no tiene reservas al expresar su distinta falta de estima por los adultos y sus influencias, ya que los residentes adultos de South Park rara vez hacen uso de sus facultades críticas.";
+            break;
+
+            case '3':
+                nombre =  "Leopold 'Butters' Stotch";
+                document.title = "Leopold 'Butters' Stotch";
+                imagen.src = "img/butters.png";
+                titulo.innerText = document.title;
+                texto.innerText = "Butters aparecía en la serie desde los primeros episodios de south park, pero solo como un personaje menor y sin frases. A partir de la tercera temporada comenzó a aparecer más. Más tarde Stan, Kyle y Cartman le acogen en su grupo de amigos como sustituto de Kenny después de que este muriera temporalmente. A Butters le obligan a usar el anorak naranja de Kenny y le llaman Kenny, cuando se desespera y grita ¡No soy Kenny! comienzan a llamarle No Kenny. Finalmente, Stan, Kyle y Cartman lo expulsan del grupo cuando deciden que no les cae muy bien lo suficiente y optan por Tweek para cubrir su lugar. Esto lleva a Butters a crear su alter ego criminal, el Profesor Caos. A partir de la sexta temporada, Butters llegó a ser parte del elenco principal.";
+            break;
+
+            case '4':
+                nombre = "Kyle Broflovski";
+                document.title = "Kyle Broflovski";
+                imagen.src = "img/kyle.png";
+                titulo.innerText = document.title;
+                texto.innerText = "Kyle comúnmente tiene experiencias extraordinarias que no son típicas de la vida de un pueblo pequeño convencional en su ciudad ficticia de South Park, Colorado. Kyle se distingue como uno de los pocos niños judíos en el programa, y debido a esto, a menudo se siente como un forastero entre el grupo principal de personajes. Su representación en este papel a menudo se trata de manera satírica, y ha obtenido tanto elogios como críticas de los espectadores judíos.";
+            break;
+
+            case '5':
+                nombre = "Kenneth 'Kenny' McCormick";
+                document.title = "Kenneth 'Kenny' McCormick";
+                imagen.src = "img/kenny.png";
+                titulo.innerText = document.title;
+                texto.innerText = "Kenneth «Kenny» McCormick, interpretado por Matt Stone, es un personaje ficticio de la serie animada South Park. Es famoso porque no se le entiende cuando habla debido a la capucha de su abrigo (de ahí que el momento en que se quita la capucha al final de South Park: Bigger, Longer & Uncut fuera 'dramático'), aunque en muy pocos episodios sí se le entiende, pero habla muy poco. También es conocido por morir en casi todos los episodios (hasta la quinta temporada) a lo cual normalmente sigue una exclamación de “¡Dios mío! ¡Han matado a Kenny! ¡Hijos de puta!” por parte de sus amigos Stan y Kyle.";
+            break;
+
+            case '6':
+                nombre = "Randy Marsh";
+                document.title = "Randy Marsh";
+                imagen.src = "img/randy.png";
+                titulo.innerText = document.title;
+                texto.innerText = "Aunque es un personaje secundario, es uno de los de mayor actividad junto a Butters, debido a sus ridículas ideas y comportamiento. Randy no es malo, en realidad es bastante amable con su familia y los demás, aunque comete demasiados errores por querer hacer las cosas bien y generalmente avergüenza a Stan.";
+            break;
+
+            case '7':
+                nombre = "Toallín";
+                document.title = "Toallín";
+                imagen.src = "img/toallin.png";
+                titulo.innerText = document.title;
+                texto.innerText = "Por lo general, se lo ve aparecer de la nada para dar consejos sobre toallas a los ciudadanos de South Park o para drogarse. El tema musical de Popeye se reproduce cada vez que Toallín se droga.";
+            break;
+
+            case '8':
+                nombre = "Tolkien 'Token' Black";
+                document.title = "Tolkien 'Token' Black";
+                imagen.src = "img/token.png";
+                titulo.innerText = document.title;
+                texto.innerText = "Tolkien Black es el único niño de negro en la clase de los protagonistas. Cartman fue preso por acto de odio después de arrojarle una piedra en la cabeza. Además de ser el único chico negro, también es considerablemente más adinerado que sus compañeros de clase.";
+            break;
+
+            case '9':
+                nombre = "James 'Jimmy' Valmer";
+                document.title = "James 'Jimmy' Valmer";
+                imagen.src = "img/jimmy.png";
+                titulo.innerText = document.title;
+                texto.innerText = "James «Jimmy» Valmer es un personaje ficticio de la serie South Park. Al igual que Timmy Burch, es discapacitado, pero usa muletas para caminar y es capaz de hablar con la gente, a pesar de un ligero problema de tartamudeo.";
+            break;
+
+            default:
+                nombre = "Ike Broflovski";
+                document.title = "Ike Broflovski";
+                imagen.src = "img/ike.png";
+                titulo.innerText = document.title;
+                texto.innerText = "Ike fue adoptado por Gerald Broflovski y Sheila Broflovski. Los padres biológicos de Ike, Harry y Elise Gints (que bautizaron a Ike como 'Peter') lo dieron en adopción porque Canadá había sido 'devastada por las Guerras de la soda' y, como resultado, no pudieron criar a un niño.";
+            break;
+        }
+        const inputNombre = document.getElementById('nombre');
+        const inputEstilo = document.getElementById('estilo');
+        inputNombre.value = nombre;
+        inputEstilo.value = estilo;
+        console.log(nombre,estilo);
+
+
+        window.history.replaceState({}, document.title, window.location.pathname);
+
+    </script>
+    <script src="pouch/pouchdb-nightly.js"></script>
+    <script src="pouch/app.js"></script>
+    <script src="pouch/base.js"></script>
+</body>
+</html>
